@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Topdown {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
 		//System.setProperty("webdriver.chrome.driver","C:\\Users\\micha\\eclipse-workspace\\Sample Test 1\\chromedriver.exe");
@@ -40,6 +40,24 @@ public class Topdown {
 	    browser.findElement(By.xpath("/html/body/div[1]/div/div/div/div/div[2]/div[2]/form/div[4]/button")).click();
 	    System.out.println("Login button clicked");
 	    
+	    Thread.sleep(1000);
+	    
+	    //to click on Generate bill button
+	    browser.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div/div/div[3]/ul/li[3]/a")).click();
+	    System.out.println("Generate bill button clicked");
+	    
+	    Thread.sleep(1000);
+	    
+	  //to click on Ministry selection field button
+	    browser.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/div/div[2]/div/div/div[2]/form/div[1]/div/span/span[1]/span/span[1]")).click();
+	    System.out.println("Ministry field clicked");
+	    
+	    Thread.sleep(1000);
+	    
+	    //to select a particular Ministry
+	    browser.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/div/div[2]/div/div/div[2]/form")).click();
+	    System.out.println("Particular Ministry clicked");
+	   
 	    //browser.close();
 	}
 
